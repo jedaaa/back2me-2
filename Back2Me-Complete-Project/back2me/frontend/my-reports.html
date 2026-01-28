@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back2Me - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Back<span>2</span>Me</h1>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="home.html" class="nav-item active">
+                    <span class="icon">🏠</span>
+                    <span>Home</span>
+                </a>
+                <a href="search.html" class="nav-item">
+                    <span class="icon">🔍</span>
+                    <span>Search</span>
+                </a>
+                <a href="lost-items.html" class="nav-item">
+                    <span class="icon">❌</span>
+                    <span>Lost Items</span>
+                </a>
+                <a href="found-items.html" class="nav-item">
+                    <span class="icon">✅</span>
+                    <span>Found Items</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <span class="icon">💬</span>
+                    <span>Messages</span>
+                </a>
+                <a href="my-reports.html" class="nav-item">
+                    <span class="icon">📋</span>
+                    <span>My Reports</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <span class="icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic-small">
+                    <div class="user-info">
+                        <span class="username" id="currentUsername">User</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Home Feed</h2>
+                <button class="btn btn-primary" id="newPostBtn">+ New Post</button>
+            </div>
+            
+            <div class="feed-container" id="feedContainer">
+                <!-- Posts will be dynamically loaded here -->
+            </div>
+        </main>
+    </div>
+    
+    <!-- New Post Modal -->
+    <div id="newPostModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Post</h2>
+            
+            <form id="newPostForm">
+                <div class="form-group">
+                    <label>Status</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="status" value="lost" checked>
+                            <span class="status-badge lost">LOST ITEM</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="status" value="found">
+                            <span class="status-badge found">FOUND ITEM</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" id="itemName" name="itemName" placeholder="e.g., Blue Backpack" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Library Building, 2nd Floor" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="place">Specific Place</label>
+                    <input type="text" id="place" name="place" placeholder="e.g., Near Study Table 5" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" placeholder="Provide details about the item..." maxlength="200" required></textarea>
+                    <div class="char-counter">
+                        <span id="charCount">0</span>/200
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="itemImage">Item Image (Optional)</label>
+                    <input type="file" id="itemImage" name="itemImage" accept="image/*">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="home.js"></script>
+</body>
+</html>

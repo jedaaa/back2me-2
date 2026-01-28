@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back2Me - Messages</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Back<span>2</span>Me</h1>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="home.html" class="nav-item">
+                    <span class="icon">🏠</span>
+                    <span>Home</span>
+                </a>
+                <a href="search.html" class="nav-item">
+                    <span class="icon">🔍</span>
+                    <span>Search</span>
+                </a>
+                <a href="lost-items.html" class="nav-item">
+                    <span class="icon">❌</span>
+                    <span>Lost Items</span>
+                </a>
+                <a href="found-items.html" class="nav-item">
+                    <span class="icon">✅</span>
+                    <span>Found Items</span>
+                </a>
+                <a href="messages.html" class="nav-item active">
+                    <span class="icon">💬</span>
+                    <span>Messages</span>
+                </a>
+                <a href="my-reports.html" class="nav-item">
+                    <span class="icon">📋</span>
+                    <span>My Reports</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <span class="icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic-small">
+                    <div class="user-info">
+                        <span class="username" id="currentUsername">User</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content messages-layout">
+            <div class="conversations-panel">
+                <div class="conversations-header">
+                    <h2>Messages</h2>
+                </div>
+                
+                <div class="conversations-list" id="conversationsList">
+                    <!-- Conversations will be loaded here -->
+                </div>
+            </div>
+            
+            <div class="chat-panel">
+                <div id="emptyState" class="empty-chat-state">
+                    <p>💬 Select a conversation to start messaging</p>
+                </div>
+                
+                <div id="chatArea" class="chat-area" style="display: none;">
+                    <div class="chat-header">
+                        <div class="chat-user-info">
+                            <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic-small" id="chatUserPic">
+                            <div>
+                                <h3 id="chatUsername">User</h3>
+                                <p class="chat-item-info" id="chatItemInfo">About: Item Name</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="messages-container" id="messagesContainer">
+                        <!-- Messages will be loaded here -->
+                    </div>
+                    
+                    <div class="message-input-container">
+                        <input type="text" id="messageInput" class="message-input" placeholder="Type a message...">
+                        <button class="btn btn-primary" id="sendMessageBtn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="messages.js"></script>
+</body>
+</html>

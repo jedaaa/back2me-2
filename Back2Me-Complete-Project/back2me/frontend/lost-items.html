@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back2Me - Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Back<span>2</span>Me</h1>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="home.html" class="nav-item">
+                    <span class="icon">🏠</span>
+                    <span>Home</span>
+                </a>
+                <a href="search.html" class="nav-item active">
+                    <span class="icon">🔍</span>
+                    <span>Search</span>
+                </a>
+                <a href="lost-items.html" class="nav-item">
+                    <span class="icon">❌</span>
+                    <span>Lost Items</span>
+                </a>
+                <a href="found-items.html" class="nav-item">
+                    <span class="icon">✅</span>
+                    <span>Found Items</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <span class="icon">💬</span>
+                    <span>Messages</span>
+                </a>
+                <a href="my-reports.html" class="nav-item">
+                    <span class="icon">📋</span>
+                    <span>My Reports</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <span class="icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic-small">
+                    <div class="user-info">
+                        <span class="username" id="currentUsername">User</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Search Items</h2>
+            </div>
+            
+            <div class="search-section">
+                <div class="search-bar-container">
+                    <input type="text" id="searchInput" class="search-bar" placeholder="Search for items...">
+                    <button class="btn btn-primary" id="searchBtn">Search</button>
+                </div>
+                
+                <div class="filters-container">
+                    <h3>Filters</h3>
+                    
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select id="statusFilter" class="filter-select">
+                            <option value="all">All</option>
+                            <option value="lost">Lost Items</option>
+                            <option value="found">Found Items</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Item Name</label>
+                        <input type="text" id="itemNameFilter" class="filter-input" placeholder="Filter by item name">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Location</label>
+                        <input type="text" id="locationFilter" class="filter-input" placeholder="Filter by location">
+                    </div>
+                    
+                    <button class="btn btn-secondary" id="clearFiltersBtn">Clear Filters</button>
+                </div>
+            </div>
+            
+            <div class="search-results-header">
+                <h3>Search Results</h3>
+                <span id="resultsCount">0 items found</span>
+            </div>
+            
+            <div class="feed-container" id="searchResults">
+                <div class="no-results">
+                    <p>🔍 Start searching to find items</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="search.js"></script>
+</body>
+</html>
